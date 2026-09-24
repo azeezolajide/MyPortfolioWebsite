@@ -48,7 +48,7 @@ const PROJECTS = [
   year: '2026',
   duration: '1:12',
   thumbnail: '',                         // '' = derived from the video URL
-  video: 'YOUR_PROJECT_VIDEO',           // e.g. https://youtu.be/xxxxxxxxxxx
+  video: 'https://player.vimeo.com/video/1166916370',           // e.g. https://youtu.be/xxxxxxxxxxx
   description:
     'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
   approach:
