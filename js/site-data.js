@@ -82,7 +82,7 @@ const SITE = {
 
   /** Delete anything you don't actually do. Nothing here is claimed for you. */
   skills: [
-    { group: 'Video Editing', items: ['Premiere Pro', 'DaVinci Resolve'] },
+    { group: 'Video Editing', items: ['Premiere Pro', 'CapCut Pro'] },
     { group: 'Motion Design', items: ['After Effects', 'Motion Graphics', 'Typography Animation', 'Brand Animation'] },
     { group: 'Creative', items: ['Visual Storytelling', 'Pacing', 'Composition', 'Sound Design', 'Colour', 'Transitions', 'Content Creation'] },
   ],
@@ -140,10 +140,10 @@ const SKILLS_PAGE = {
   technicalSkills: [
     { code: 'Pr', name: 'Premiere Pro', body: 'Editing, multicam sync, pacing and structure.' },
     { code: 'Ae', name: 'After Effects', body: 'Motion graphics, visual effects, and animation.' },
-    { code: 'DR', name: 'DaVinci Resolve', body: 'Color grading and audio post-production.' },
+    { code: 'DR', name: 'CapCut Pro', body: 'AI tool and editing.' },
     { code: 'Ps', name: 'Photoshop', body: 'Thumbnails, graphics, and image compositing.' },
     { code: 'Ai', name: 'Illustrator', body: 'Vector assets and typography for motion work.' },
-    { code: 'C4D', name: 'Cinema 4D', body: '3D elements and dimensional motion design.' },
+    { code: 'C4D', name: 'Element 3d', body: '3D elements and dimensional motion design.' },
   ],
 
   /** The kinds of projects you take on. Tags reuse the same skill language
