@@ -91,10 +91,8 @@ const SITE = {
   tools: [
     'Adobe Premiere Pro',
     'Adobe After Effects',
-    'DaVinci Resolve',
     'Photoshop',
     'Illustrator',
-    'Cinema 4D',
     'AI creative tools',
   ],
 
@@ -194,10 +192,10 @@ const SKILLS_PAGE = {
    * editing hint instead of the stat until you do.
    */
   achievements: [
-    { value: 'YOUR_PROJECT_COUNT', label: 'Projects completed' },
-    { value: 'YOUR_CLIENT_COUNT', label: 'Clients worked with' },
-    { value: 'YOUR_EXPERIENCE_YEARS', label: 'Years of experience' },
-    { value: 'YOUR_TURNAROUND_TIME', label: 'Typical turnaround' },
+    { value: '6', label: 'Projects completed' },
+    { value: '5', label: 'Clients worked with' },
+    { value: '5', label: 'Years of experience' },
+    { value: '5days to 2 weeks', label: 'Typical turnaround' },
   ],
 
   /** How a project actually moves, start to finish. */
