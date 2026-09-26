@@ -56,7 +56,7 @@ const PROJECTS = [
   tools: ['After Effects', 'Premiere Pro'],
   role: 'Video Editor / Motion Designer',
   results: ['What the video was used for', 'What it helped the client do'],
-  gallery: ['captureaz.PNG', 'capturez.PNG'] },
+  gallery: ['captureaz.png', 'capturez.png'] },
   { title: 'Open slot', slug: 'slot-02', category: 'Video Editing', placeholder: true },
   { title: 'Open slot', slug: 'slot-03', category: 'Short Form', placeholder: true },
   { title: 'Open slot', slug: 'slot-04', category: 'Talking Head', placeholder: true },
