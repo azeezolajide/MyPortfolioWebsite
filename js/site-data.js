@@ -29,10 +29,10 @@ const SITE = {
   contact: {
     email: 'YOUR_EMAIL',
     socials: [
-      { label: 'LinkedIn', href: 'YOUR_LINKEDIN' },
-      { label: 'Instagram', href: 'YOUR_INSTAGRAM' },
-      { label: 'X', href: 'YOUR_X_PROFILE' },
-      { label: 'YouTube', href: 'YOUR_YOUTUBE' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/popoola-abdul-azeez-597683119/' },
+      { label: 'Instagram', href: 'https://www.instagram.com/vxmedia_edit/' },
+      { label: 'X', href: 'https://x.com/vxmedia_abdul' },
+      { label: 'YouTube', href: 'https://www.youtube.com/@vxmedia_abdul' },
     ],
   },
 
