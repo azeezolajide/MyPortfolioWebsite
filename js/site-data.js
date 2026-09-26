@@ -22,12 +22,12 @@ const SITE = {
     description:
       'Vxmedia_edit is a Video Editor and Motion Graphics Designer creating engaging visual stories, motion graphics, brand animations, and digital content.',
     /** Leave empty to skip the tag. Or point at a 1200x630 image, e.g. 'assets/og.jpg'. */
-    ogImage: '',
+    ogImage: 'profile01.jpg',
   },
 
   /** Replace every placeholder below with your real details. */
   contact: {
-    email: 'YOUR_EMAIL',
+    email: 'azeezolajide2@gmail.com',
     socials: [
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/popoola-abdul-azeez-597683119/' },
       { label: 'Instagram', href: 'https://www.instagram.com/vxmedia_edit/' },
