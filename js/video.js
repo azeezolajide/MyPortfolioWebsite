@@ -29,7 +29,7 @@ function parseVideo(url) {
 
 /** Falls back to the platform's own thumbnail when no image is supplied. */
 function posterFor(thumbnail, videoUrl) {
-  if (thumbnail && thumbnail.indexOf('YOUR_') !== 0) return thumbnail;
+  if (thumbnail && thumbnail.indexOf('YOUR_') !== 0) return resolveAsset(thumbnail);
 
   const v = parseVideo(videoUrl);
   if (v.kind === 'youtube') return `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`;
@@ -39,4 +39,22 @@ function posterFor(thumbnail, videoUrl) {
 
 function isPlaceholder(value) {
   return !value || value.indexOf('YOUR_') === 0;
+}
+
+/**
+ * All image/asset paths in js/site-data.js and js/projects-data.js are
+ * written as if from the site root (e.g. 'assets/work/frame-01.jpg'), since
+ * that's the simplest thing to type. But work/project.html actually lives
+ * one folder deep, so a root-relative path needs a '../' prefix there.
+ * This resolves that automatically — nothing to think about when editing
+ * the data files. Absolute URLs (https://…) and data: URIs pass through
+ * untouched.
+ */
+function resolveAsset(path) {
+  if (!path) return path;
+  if (/^([a-z][a-z0-9+.-]*:)?\/\//i.test(path) || path.startsWith('data:') || path.startsWith('/')) {
+    return path;
+  }
+  const inWorkFolder = location.pathname.indexOf('/work/') > -1;
+  return inWorkFolder ? `../${path}` : path;
 }
