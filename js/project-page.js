@@ -75,11 +75,11 @@ function renderProject(project) {
     const galleryEl = document.getElementById('p-gallery');
     galleryEl.hidden = false;
     galleryEl.innerHTML = project.gallery
-      .map(
-        (src, i) =>
-          `<img src="${src}" alt="${escapeHtml(project.title)} — frame ${i + 1}" loading="lazy" />`,
-      )
-      .join('');
+  .map(
+    (src, i) =>
+      `<img src="${resolveAsset(src)}" alt="${escapeHtml(project.title)} — frame ${i + 1}" loading="lazy" />`,
+  )
+  .join('');
   }
 
   const { prev, next } = getAdjacent(project.slug);
