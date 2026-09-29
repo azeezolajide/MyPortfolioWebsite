@@ -56,7 +56,7 @@ const PROJECTS = [
   tools: ['After Effects', 'Premiere Pro'],
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin', 'What it helped the client do'],
-  gallery: ['captureaz.PNG', 'cap.jpg']
+  gallery: ['captureaz.png', 'cap.jpg']
    },
   { title: 'Open slot', slug: 'slot-02', category: 'Video Editing', placeholder: true },
   { title: 'Open slot', slug: 'slot-03', category: 'Short Form', placeholder: true },
