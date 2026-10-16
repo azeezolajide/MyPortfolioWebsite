@@ -52,9 +52,16 @@ function renderWorkGrid(gridEl, filtersEl, projects) {
 
   if (!filtersEl) return;
 
-  const available = CATEGORIES.filter(
-    (c) => c === 'All' || projects.some((p) => p.category === c),
-  );
+  // Show every category from js/projects-data.js, even ones with no projects yet.
+  const available = CATEGORIES;
+
+  // Friendly message for categories that have nothing in them yet.
+  const emptyNote = document.createElement('p');
+  emptyNote.className = 'muted';
+  emptyNote.style.cssText = 'margin-top:2rem;font-size:.875rem';
+  emptyNote.textContent = 'No projects in this category yet — check back soon.';
+  emptyNote.hidden = true;
+  gridEl.after(emptyNote);
 
   filtersEl.innerHTML = available
     .map(
@@ -71,8 +78,11 @@ function renderWorkGrid(gridEl, filtersEl, projects) {
     chip.setAttribute('aria-selected', 'true');
 
     const cat = chip.dataset.cat;
+    let shown = 0;
     gridEl.querySelectorAll('.card').forEach((card) => {
       card.hidden = cat !== 'All' && card.dataset.cat !== cat;
+      if (!card.hidden) shown++;
     });
+    emptyNote.hidden = shown > 0;
   });
 }

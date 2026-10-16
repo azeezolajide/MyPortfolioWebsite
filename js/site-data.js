@@ -38,7 +38,7 @@ const SITE = {
 
   nav: [
     { label: 'Home', href: 'index.html' },
-    { label: 'Work', href: 'work.html' },
+    { label: 'Work', href: 'index.html#work' },
     { label: 'Skills', href: 'skills.html' },
     { label: 'About', href: 'index.html#about' },
     { label: 'Services', href: 'index.html#services' },

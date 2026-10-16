@@ -96,6 +96,7 @@
       <a href="work.html" class="muted" style="font-size:.875rem">All projects</a>
     </div>
     <p class="prose rv" style="margin-top:1.5rem">A selection of video editing, motion graphics, brand animation, and visual storytelling projects.</p>
+    <div class="filters" id="home-filters" role="tablist" aria-label="Filter projects by category"></div>
     <div class="grid" id="home-grid" aria-live="polite"></div>
   </div>
 </section>
@@ -210,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // work — home shows first 6
-  renderWorkGrid(document.getElementById('home-grid'), null, PROJECTS.slice(0, 6));
+ renderWorkGrid(document.getElementById('home-grid'), document.getElementById('home-filters'), PROJECTS);
 
   // services
   document.getElementById('services-grid').innerHTML = SITE.services
