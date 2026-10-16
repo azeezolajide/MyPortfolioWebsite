@@ -13,7 +13,7 @@ const SITE = {
   longTitle: 'Creative Video Editor | Motion Designer | Visual Storyteller',
 
   /** Used for canonical links and social cards. Include the trailing domain only, no slash. */
-  url: 'https://YOUR_DOMAIN',
+  url: 'abdulazeezportfolio.vercel.app',
 
   availability: 'Available for freelance & remote work',
 
