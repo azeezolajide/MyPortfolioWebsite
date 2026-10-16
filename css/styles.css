@@ -5,43 +5,16 @@
 ───────────────────────────────────────────────────────────── */
 :root {
   --base: #08090a;
-  --base-rgb: 8, 9, 10;
   --surface: #100e0c;
   --line: #221c17;
   --ink: #f2f1ee;
-  --ink-rgb: 242, 241, 238;
   --muted: #8c8580;
   --accent: #f04a00;
   --cool: #b8846a;
-  /* Fixed dark text for anything sitting on the orange accent — stays
-     readable in both themes rather than flipping with --base. */
-  --on-accent: #15110d;
-  /* Cursor spotlight position, updated live by js/main.js. Defaults keep
-     the glow somewhere sensible before the first pointer move or on
-     touch-only devices that never fire one. */
-  --mx: 50%;
-  --my: 24%;
   --shell: 82rem;
   --gutter: clamp(1.25rem, 4vw, 3rem);
   --cut: cubic-bezier(0.16, 1, 0.3, 1);
   color-scheme: dark;
-}
-
-/*
- * Light theme. Toggled by setting data-theme="light" on <html> (see
- * js/main.js). Same brand orange accent, same warm neutrals — only
- * polarity flips, so everything built on these tokens adapts for free.
- */
-:root[data-theme='light'] {
-  --base: #faf8f5;
-  --base-rgb: 250, 248, 245;
-  --surface: #f1ede7;
-  --line: #e3dcd3;
-  --ink: #171310;
-  --ink-rgb: 23, 19, 16;
-  --muted: #6e655b;
-  --cool: #8a5a3f;
-  color-scheme: light;
 }
 
 * {
@@ -65,10 +38,8 @@ body {
 
 /*
  * Ambient gradient background — a bold orange glow pooling out of a near-
- * black base, with a dark vignette pulling the edges back into shadow, a
- * faint blueprint-style grid for texture, and a soft spotlight that follows
- * the pointer (js/main.js updates --mx/--my on move). Built entirely from
- * the brand's own accent colour and CSS gradients, not a stock image.
+ * black base, with a dark vignette pulling the edges back into shadow.
+ * Built from the brand's own accent colour, not a stock image.
  */
 body::before {
   content: '';
@@ -76,43 +47,11 @@ body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image:
-    radial-gradient(560px circle at var(--mx) var(--my), rgba(240, 74, 0, 0.16), transparent 60%),
+  background:
     radial-gradient(62vw 62vw at 85% -10%, rgba(240, 74, 0, 0.28), transparent 60%),
     radial-gradient(48vw 48vw at 6% 22%, rgba(240, 74, 0, 0.10), transparent 62%),
-    radial-gradient(120% 120% at 50% 45%, transparent 45%, rgba(0, 0, 0, 0.6) 100%);
-}
-
-/* Same idea, much gentler — a dark vignette and a strong glow read as moody
-   on a near-black page but as a dirty smudge on a light one, so light mode
-   gets softer values for every layer except the grid, which already
-   adapts automatically via --ink-rgb. */
-:root[data-theme='light'] body::before {
-  background-image:
-    radial-gradient(560px circle at var(--mx) var(--my), rgba(240, 74, 0, 0.10), transparent 60%),
-    radial-gradient(62vw 62vw at 85% -10%, rgba(240, 74, 0, 0.14), transparent 60%),
-    radial-gradient(48vw 48vw at 6% 22%, rgba(240, 74, 0, 0.07), transparent 62%),
-    radial-gradient(120% 120% at 50% 45%, transparent 55%, rgba(23, 19, 16, 0.05) 100%);
-}
-
-
-/*
- * Blueprint grid. Lives on its own layer (html::before) so it can be
- * masked: strongest near the centre of the viewport, dissolving toward
- * the edges. Colour follows --ink-rgb, so it flips with the theme.
- */
-:root::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(var(--ink-rgb), 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--ink-rgb), 0.025) 1px, transparent 1px);
-  background-size: 48px 48px;
-  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 38%, #000 15%, transparent 100%);
-  mask-image: radial-gradient(ellipse 75% 65% at 50% 38%, #000 15%, transparent 100%);
+    radial-gradient(120% 120% at 50% 45%, transparent 45%, rgba(0, 0, 0, 0.6) 100%),
+    var(--base);
 }
 
 /* Everything else needs to sit visibly above the gradient layer. */
@@ -137,7 +76,7 @@ body::after {
 
 ::selection {
   background: var(--accent);
-  color: var(--on-accent);
+  color: var(--base);
 }
 
 :focus-visible {
@@ -177,7 +116,7 @@ ol {
   top: -3rem;
   z-index: 100;
   background: var(--accent);
-  color: var(--on-accent);
+  color: var(--base);
   padding: 0.6rem 1.25rem;
   border-radius: 999px;
   font-weight: 600;
@@ -252,7 +191,7 @@ h2.display { font-size: clamp(2.2rem, 7vw, 5rem); }
   transition: all 0.3s var(--cut);
   cursor: pointer;
 }
-.btn-accent { background: var(--accent); color: var(--on-accent); }
+.btn-accent { background: var(--accent); color: var(--base); }
 .btn-accent:hover { background: var(--ink); }
 .btn-ghost { border-color: var(--line); color: var(--ink); background: transparent; }
 .btn-ghost:hover { background: var(--ink); color: var(--base); border-color: var(--ink); }
@@ -265,7 +204,7 @@ header.site-header {
   z-index: 50;
   transition: background 0.5s var(--cut);
 }
-header.site-header.scrolled { background: rgba(var(--base-rgb), 0.85); backdrop-filter: blur(12px); }
+header.site-header.scrolled { background: rgba(8, 9, 10, 0.85); backdrop-filter: blur(12px); }
 
 .navbar {
   display: flex;
@@ -280,32 +219,9 @@ header.site-header.scrolled .navbar { border-bottom-color: var(--line); }
 .wordmark { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; }
 .wordmark span { color: var(--accent); }
 
-/* Wraps navlinks + theme toggle + burger so the toggle stays visible
-   at every viewport width, not just inside the desktop nav. */
-.nav-right { display: flex; align-items: center; gap: 1.25rem; }
-
 .navlinks { display: none; align-items: center; gap: 2.25rem; }
 .navlinks a { font-size: 0.875rem; color: var(--muted); transition: color 0.2s; }
 .navlinks a:hover, .navlinks a[aria-current="page"] { color: var(--ink); }
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  flex-shrink: 0;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  transition: border-color 0.3s var(--cut), color 0.3s var(--cut);
-}
-.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-.theme-toggle .icon-moon { display: none; }
-:root[data-theme='light'] .theme-toggle .icon-sun { display: none; }
-:root[data-theme='light'] .theme-toggle .icon-moon { display: block; }
 
 .burger {
   display: flex;
@@ -387,9 +303,6 @@ header.site-header.scrolled .navbar { border-bottom-color: var(--line); }
   height: 70vh;
   pointer-events: none;
   background: radial-gradient(circle, rgba(240, 74, 0, 0.18), transparent 62%);
-}
-:root[data-theme='light'] .hero .key {
-  background: radial-gradient(circle, rgba(240, 74, 0, 0.10), transparent 62%);
 }
 .hero h1 { font-size: clamp(2.9rem, 12.2vw, 10.5rem); }
 
@@ -485,9 +398,6 @@ header.site-header.scrolled .navbar { border-bottom-color: var(--line); }
   background: rgba(8, 9, 10, 0.8);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  /* This chip is always dark (it sits on a thumbnail), in both themes —
-     so its text stays fixed-light rather than following --muted. */
-  color: #f2f1ee;
 }
 .frame .underline {
   position: absolute;
@@ -520,7 +430,7 @@ header.site-header.scrolled .navbar { border-bottom-color: var(--line); }
   transition: all 0.3s var(--cut);
 }
 .chip:hover { border-color: var(--ink); color: var(--ink); }
-.chip[aria-selected='true'] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip[aria-selected='true'] { background: var(--accent); border-color: var(--accent); color: var(--base); }
 
 /* ── video player ──────────────────────────────────────────── */
 .player {
@@ -581,7 +491,7 @@ header.site-header.scrolled .navbar { border-bottom-color: var(--line); }
 .player button.play-trigger:hover .play {
   border-color: var(--accent);
   background: var(--accent);
-  color: var(--on-accent);
+  color: var(--base);
 }
 .player iframe,
 .player video {
