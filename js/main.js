@@ -11,7 +11,40 @@ document.addEventListener('DOMContentLoaded', () => {
   wirePlayhead();
   buildMarquee();
   markCurrentNavLink();
+  wireThemeToggle();
+  wireCursorGlow();
 });
+
+const THEME_KEY = 'vxmedia-theme';
+
+/**
+ * Reads the stored theme (same value the inline head script already applied
+ * to <html> to avoid a flash), syncs the toggle button's state to match, and
+ * wires the click handler. Safe to call even if #theme-toggle isn't on the
+ * page — every page should have it, but this won't error if one doesn't.
+ */
+function wireThemeToggle() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  const sync = (theme) => {
+    btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+    btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+  };
+
+  sync(document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+
+  btn.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem(THEME_KEY, next);
+    } catch (e) {
+      // Private browsing / storage disabled — theme still works for this session.
+    }
+    sync(next);
+  });
+}
 
 /**
  * Pages one level deep (work/project.html) need a '../' prefix on every
@@ -182,6 +215,47 @@ function wirePlayhead() {
   );
   window.addEventListener('resize', update);
   update();
+}
+
+/**
+ * Moves the --mx/--my custom properties that drive the background's cursor
+ * spotlight (see body::before in css/styles.css). Pointer Events cover
+ * mouse, touch-drag and pen in one listener. The glow eases toward the
+ * pointer each frame rather than snapping to it, which reads as a soft
+ * drifting light instead of a jittery cursor-chase.
+ */
+function wireCursorGlow() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const root = document.documentElement;
+  let targetX = window.innerWidth / 2;
+  let targetY = window.innerHeight * 0.24;
+  let curX = targetX;
+  let curY = targetY;
+  let raf = 0;
+
+  const step = () => {
+    curX += (targetX - curX) * 0.12;
+    curY += (targetY - curY) * 0.12;
+    root.style.setProperty('--mx', `${curX}px`);
+    root.style.setProperty('--my', `${curY}px`);
+
+    if (Math.abs(targetX - curX) > 0.5 || Math.abs(targetY - curY) > 0.5) {
+      raf = requestAnimationFrame(step);
+    } else {
+      raf = 0;
+    }
+  };
+
+  window.addEventListener(
+    'pointermove',
+    (e) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+      if (!raf) raf = requestAnimationFrame(step);
+    },
+    { passive: true },
+  );
 }
 
 function buildMarquee() {
