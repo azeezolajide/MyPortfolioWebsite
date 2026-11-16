@@ -83,12 +83,12 @@ const PROJECTS = [
   year: '2025',
   duration: '57 seconds',
   thumbnail: '',                         // '' = derived from the video URL
-  video: 'https://player.vimeo.com/video/1163940383',           // e.g. https://youtu.be/xxxxxxxxxxx
+  video: 'https://player.vimeo.com/video/1163948634',           // e.g. https://youtu.be/xxxxxxxxxxx
   description:
     'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
   approach:
-    'I planned on editing it in 3 weeks.',
-  tools: ['After Effects', 'Illustrator'],
+    'I planned on editing it in 2 weeks.',
+  tools: ['After Effects', 'Illustrator, CapCut'],
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
