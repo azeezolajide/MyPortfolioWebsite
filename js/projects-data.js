@@ -75,6 +75,23 @@ const PROJECTS = [
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
+
+  { title: 'LATRIXCRM',
+  slug: 'promotional-video',        // becomes project.html?slug=saas-product-explainer
+  category: 'Video Editing',
+  client: 'LATRIXCRM TEAM',
+  year: '2025',
+  duration: '57 seconds',
+  thumbnail: '',                         // '' = derived from the video URL
+  video: 'https://player.vimeo.com/video/1163940383',           // e.g. https://youtu.be/xxxxxxxxxxx
+  description:
+    'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
+  approach:
+    'I planned on editing it in 3 weeks.',
+  tools: ['After Effects', 'Illustrator'],
+  role: 'Video Editor / Motion Designer',
+  results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
+  gallery: ['/cap.jpg', '/cap.jpg'] },
   { title: 'Open slot', slug: 'slot-03', category: 'Short Form', placeholder: true },
   { title: 'Open slot', slug: 'slot-04', category: 'Talking Head', placeholder: true },
   { title: 'Open slot', slug: 'slot-05', category: 'Brand Animation', placeholder: true },
