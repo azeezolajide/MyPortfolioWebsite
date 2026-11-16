@@ -77,7 +77,7 @@ const PROJECTS = [
   gallery: ['/cap.jpg', '/cap.jpg'] },
 
   { title: 'LATRIXCRM',
-  slug: 'promotional-video',        // becomes project.html?slug=saas-product-explainer
+  slug: 'promotionalVideo-Edit',        // becomes project.html?slug=saas-product-explainer
   category: 'Video Editing',
   client: 'LATRIXCRM TEAM',
   year: '2025',
