@@ -76,12 +76,12 @@ const PROJECTS = [
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
 
-  { title: 'LATRIXCRM',
+  { title: 'GEMINI',
   slug: 'promotionalVideo-Edit',        // becomes project.html?slug=saas-product-explainer
   category: 'Video Editing',
-  client: 'LATRIXCRM TEAM',
+  client: 'GEMINI TEAM',
   year: '2025',
-  duration: '57 seconds',
+  duration: '5760 seconds',
   thumbnail: '',                         // '' = derived from the video URL
   video: 'https://player.vimeo.com/video/1163948634',           // e.g. https://youtu.be/xxxxxxxxxxx
   description:
