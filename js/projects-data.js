@@ -45,7 +45,7 @@ const PROJECTS = [
   slug: 'saas-product-explainer',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
   client: 'YOUR_CLIENT',
-  year: '2026',
+  year: '2024',
   duration: '1:12',
   thumbnail: '',                         // '' = derived from the video URL
   video: 'https://player.vimeo.com/video/1166916370',           // e.g. https://youtu.be/xxxxxxxxxxx
@@ -60,7 +60,7 @@ const PROJECTS = [
    },
 
   { title: 'LATRIXCRM',
-  slug: 'saas-product-explainer',        // becomes project.html?slug=saas-product-explainer
+  slug: 'promotional-video',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
   client: 'LATRIXCRM TEAM',
   year: '2025',
