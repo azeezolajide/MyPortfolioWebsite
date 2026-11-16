@@ -58,10 +58,11 @@ const PROJECTS = [
   results: ['The video was used for promotional advertisement on linkedin', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg']
    },
-  { title: 'SaaS Product Explainer',
+
+  { title: 'LATRIXCRM',
   slug: 'saas-product-explainer',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
-  client: 'LATRIXCRM',
+  client: 'LATRIXCRM TEAM',
   year: '2025',
   duration: '57 seconds',
   thumbnail: '',                         // '' = derived from the video URL
@@ -72,7 +73,7 @@ const PROJECTS = [
     'Two or three sentences on the brief, the visual direction you chose, and why.',
   tools: ['After Effects', 'Illustrator'],
   role: 'Video Editor / Motion Designer',
-  results: ['The video was used for promotional advertisement on linkedin', 'What it helped the client do'],
+  results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
   { title: 'Open slot', slug: 'slot-03', category: 'Short Form', placeholder: true },
   { title: 'Open slot', slug: 'slot-04', category: 'Talking Head', placeholder: true },
