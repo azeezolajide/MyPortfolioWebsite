@@ -70,7 +70,7 @@ const PROJECTS = [
   description:
     'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
   approach:
-    'Two or three sentences on the brief, the visual direction you chose, and why.',
+    'I planned on editing it in 3 weeks.',
   tools: ['After Effects', 'Illustrator'],
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
