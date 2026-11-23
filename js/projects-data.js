@@ -60,7 +60,7 @@ const PROJECTS = [
    },
 
   { title: 'LATRIXCRM',
-  slug: 'promotionalVideo1',        // becomes project.html?slug=saas-product-explainer
+  slug: 'promotionalVideo',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
   client: 'LATRIXCRM TEAM',
   year: '2025',
@@ -77,7 +77,7 @@ const PROJECTS = [
   gallery: ['/cap.jpg', '/cap.jpg'] },
 
   { title: 'GEMINI',
-  slug: 'promotionalVideo2',        // becomes project.html?slug=saas-product-explainer
+  slug: 'promovideo',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
   client: 'GEMINI TEAM',
   year: '2025',
@@ -94,7 +94,7 @@ const PROJECTS = [
   gallery: ['/cap.jpg', '/cap.jpg'] },
 
   { title: 'LATRIXCRM',
-  slug: 'promotionalVideo3',        // becomes project.html?slug=saas-product-explainer
+  slug: 'productvideo',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
   client: 'LATRIXCRM TEAM',
   year: '2025',
