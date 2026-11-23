@@ -93,7 +93,7 @@ const PROJECTS = [
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
 
-  { title: 'GEMINI',
+  { title: 'voyage',
   slug: 'promotionalVideo-clip',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
   client: 'GEMINI TEAM',
