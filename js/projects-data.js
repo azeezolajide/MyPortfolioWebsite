@@ -92,6 +92,23 @@ const PROJECTS = [
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
+
+  { title: 'GEMINI',
+  slug: 'promotionalVideo-clip',        // becomes project.html?slug=saas-product-explainer
+  category: 'Motion Graphics',
+  client: 'GEMINI TEAM',
+  year: '2025',
+  duration: '41 seconds',
+  thumbnail: '',                         // '' = derived from the video URL
+  video: 'https://player.vimeo.com/video/1166917268',           // e.g. https://youtu.be/xxxxxxxxxxx
+  description:
+    'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
+  approach:
+    'I planned on editing it in 2 weeks.',
+  tools: ['After Effects', 'Illustrator, CapCut'],
+  role: 'Video Editor / Motion Designer',
+  results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
+  gallery: ['/cap.jpg', '/cap.jpg'] },
   
   { title: 'Open slot', slug: 'slot-03', category: 'Short Form', placeholder: true },
   { title: 'Open slot', slug: 'slot-04', category: 'Talking Head', placeholder: true },
