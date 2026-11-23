@@ -41,7 +41,7 @@ const CATEGORIES = [
  */
 
 const PROJECTS = [
-  { title: 'SaaS Product Explainer',
+  { title: 'TEAMX',
   slug: 'saas-product-explainer',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
   client: 'YOUR_CLIENT',
@@ -53,9 +53,9 @@ const PROJECTS = [
     'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
   approach:
     'Two or three sentences on the brief, the visual direction you chose, and why.',
-  tools: ['After Effects', 'Premiere Pro'],
+  tools: ['After Effects', 'Figma'],
   role: 'Video Editor / Motion Designer',
-  results: ['The video was used for promotional advertisement on linkedin', 'What it helped the client do'],
+  results: ['The video was used for promotional advertisement on linkedin', 'It increases the SAAS product awareness'],
   gallery: ['/cap.jpg', '/cap.jpg']
    },
 
@@ -78,10 +78,10 @@ const PROJECTS = [
 
   { title: 'GEMINI',
   slug: 'promotionalVideo-Edit',        // becomes project.html?slug=saas-product-explainer
-  category: 'Video Editing',
+  category: 'Motion Graphics',
   client: 'GEMINI TEAM',
   year: '2025',
-  duration: '5760 seconds',
+  duration: '41 seconds',
   thumbnail: '',                         // '' = derived from the video URL
   video: 'https://player.vimeo.com/video/1163948634',           // e.g. https://youtu.be/xxxxxxxxxxx
   description:
@@ -89,6 +89,23 @@ const PROJECTS = [
   approach:
     'I planned on editing it in 2 weeks.',
   tools: ['After Effects', 'Illustrator, CapCut'],
+  role: 'Video Editor / Motion Designer',
+  results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
+  gallery: ['/cap.jpg', '/cap.jpg'] },
+
+  { title: 'LATRIXCRM',
+  slug: 'promotional-video',        // becomes project.html?slug=saas-product-explainer
+  category: 'Motion Graphics',
+  client: 'LATRIXCRM TEAM',
+  year: '2025',
+  duration: '57 seconds',
+  thumbnail: '',                         // '' = derived from the video URL
+  video: 'https://player.vimeo.com/video/1166917268',           // e.g. https://youtu.be/xxxxxxxxxxx
+  description:
+    'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
+  approach:
+    'I planned on editing it in 3 weeks.',
+  tools: ['After Effects', 'Illustrator'],
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
