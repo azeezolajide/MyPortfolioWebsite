@@ -96,33 +96,33 @@ const PROJECTS = [
   { title: 'FEATURESPECS',
   slug: 'promotionalVideo-clip',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
-  client: 'GEMINI TEAM',
+  client: 'FEATURESPECS TEAM',
   year: '2025',
-  duration: '41 seconds',
+  duration: '49 seconds',
   thumbnail: '',                         // '' = derived from the video URL
   video: 'https://player.vimeo.com/video/1166917268',           // e.g. https://youtu.be/xxxxxxxxxxx
   description:
-    'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
+    'A motion-led product video designed to explain a SaaS product in a simple and engaging way to simplify project.',
   approach:
     'I planned on editing it in 2 weeks.',
-  tools: ['After Effects', 'Illustrator, CapCut'],
+  tools: ['After Effects', 'Illustrator '],
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
 
-  { title: 'FEATURESPECS',
+  { title: 'ULTRA-SCAN',
   slug: 'promotionalVideo-clip2',        // becomes project.html?slug=saas-product-explainer
   category: 'Motion Graphics',
-  client: 'GEMINI TEAM',
+  client: 'ULTRA-SCAN TEAM',
   year: '2025',
-  duration: '41 seconds',
+  duration: '27 seconds',
   thumbnail: '',                         // '' = derived from the video URL
   video: 'https://player.vimeo.com/video/1183615385',           // e.g. https://youtu.be/xxxxxxxxxxx
   description:
-    'A motion-led product video designed to explain a SaaS product in a simple and engaging way.',
+    'A motion-led product video designed to explain scan and detect fradulent messages or contents.',
   approach:
     'I planned on editing it in 2 weeks.',
-  tools: ['After Effects', 'Illustrator, CapCut'],
+  tools: ['After Effects', 'Illustrator'],
   role: 'Video Editor / Motion Designer',
   results: ['The video was used for promotional advertisement on linkedin and youtube', 'What it helped the client do'],
   gallery: ['/cap.jpg', '/cap.jpg'] },
